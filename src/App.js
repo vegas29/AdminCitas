@@ -16,6 +16,7 @@ function App() {
 
   //UseEffect para realizar ciertas operaciones cuando el state cambia
   useEffect( () => {
+    let citasIniciales = JSON.parse(localStorage.getItem('citas'));
     localStorage.setItem('citas', JSON.stringify(citas));
   }, [citas, citasIniciales] );
 
