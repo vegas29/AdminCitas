@@ -12,16 +12,12 @@ function App() {
   }
   //Arreglo de citas
 
-  const [citas, guardarCitas] = useState([citasIniciales]);
+  const [citas, guardarCitas] = useState(citasIniciales);
 
   //UseEffect para realizar ciertas operaciones cuando el state cambia
-  useEffect(()=>{
-    if(citasIniciales){
-      localStorage.setItem('citas', JSON.stringify(citas));
-    }else{
-      localStorage.setItem('citas', JSON.stringify([]));
-    }
-  }, [citas]);
+  useEffect( () => {
+    localStorage.setItem('citas', JSON.stringify(citas));
+  }, [citas, citasIniciales] );
 
   //Funcion que tome las citas actuales y agregue la nueva
 
