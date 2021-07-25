@@ -80,7 +80,7 @@ input[type="time"] {
 }
 .button.eliminar,
 .button.eliminar:hover {
-  background-color: #c10059;
+  background-color: #23B7E7;
   color: white;
   margin-top: 2rem;
 }
